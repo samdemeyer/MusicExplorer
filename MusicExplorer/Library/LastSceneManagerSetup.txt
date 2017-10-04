@@ -1,8 +1,1 @@
-sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/WorldScene.unity
-=======
-- path: Assets/Scenes/StartMenu.unity
->>>>>>> Development
-  isLoaded: 1
-  isActive: 1
+sceneSetups: []
