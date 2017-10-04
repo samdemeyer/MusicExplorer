@@ -801,6 +801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9370a02f0af339d47aaff7e35335bbc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Explosion: {fileID: 21300002, guid: c8260d15cb31d3d49a251f7cdb4d1777, type: 3}
   inputController: {fileID: 1446920018947586}
   health: 2
   healthBar:
