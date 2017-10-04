@@ -62,10 +62,9 @@ public class PlatformGenerator : MonoBehaviour
                 obj.name = "NormalGround";
             }            
 //            obj.AddComponent<BoxCollider2D>();
-            transform.position = new Vector2(transform.position.x + 16, transform.position.y);
+            transform.position = new Vector2(transform.position.x + 17, transform.position.y);
             obj.transform.position = transform.position;
             currentPlatforms.Add(obj);
-            possibleEnemieNextPlatform = true;
             if (currentPlatforms.Count > 5)
             {
                 extrasOnMap(currentPlatforms[currentPlatforms.Count-1]);
@@ -73,18 +72,17 @@ public class PlatformGenerator : MonoBehaviour
         }
     }
 
-    private bool possibleEnemieNextPlatform = true;
     private void extrasOnMap(GameObject _platformToSpawnOn)
     {
-        int random = Random.Range(1 , 7);
-        if (_platformToSpawnOn.name == "NormalGround" && random > 4)
+        int random = Random.Range(0 , 7);
+        if (_platformToSpawnOn.name == "NormalGround" && random > 4 )
         {
             GameObject orc = Instantiate(orcToSpawn) as GameObject;
             orc.name = "Orc";
-            orc.transform.position = new Vector2(_platformToSpawnOn.transform.position.x, _platformToSpawnOn.transform.position.y);
+            orc.transform.position = new Vector2(_platformToSpawnOn.transform.position.x, _platformToSpawnOn.transform.position.y+4);
 
         }
-        else if (_platformToSpawnOn.name == "NormalGround" && random <= 4)
+        else if (_platformToSpawnOn.name == "NormalGround" && random <2 )
         {
             GameObject crate = Instantiate(musicBox) as GameObject;
             crate.name = "MusicCrate";
